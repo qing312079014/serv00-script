@@ -60,3 +60,5 @@ for server in servers:
 
 # 发送汇总消息到 Telegram
 send_telegram_message(telegram_token, telegram_chat_id, summary_message)
+# 默认恢复命令
+default_restore_command = "cd ~/domains/$USER.serv00.net/vless && ./check_vless.sh"
