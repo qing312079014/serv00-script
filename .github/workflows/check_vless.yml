@@ -30,6 +30,3 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python3 vless/recover_vless.py
-
-# 默认恢复命令
-default_restore_command = "cd ~/domains/$USER.serv00.net/vless && ./check_vless.sh"
