@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  restore:
+  restore_and_notify:
     runs-on: ubuntu-latest
 
     steps:
