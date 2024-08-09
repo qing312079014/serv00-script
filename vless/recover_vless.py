@@ -47,7 +47,8 @@ for server in servers:
     username = server['username']
     password = server['password']
     cron_command = server.get('cron', default_restore_command)
-
+# 默认恢复命令
+default_restore_command = "cd ~/domains/$USER.serv00.net/vless && ./check_vless.sh"
     print(f"连接到 {host}...")
 
     # 执行恢复命令（这里假设使用 SSH 连接和密码认证）
@@ -60,5 +61,3 @@ for server in servers:
 
 # 发送汇总消息到 Telegram
 send_telegram_message(telegram_token, telegram_chat_id, summary_message)
-# 默认恢复命令
-default_restore_command = "cd ~/domains/$USER.serv00.net/vless && ./check_vless.sh"
